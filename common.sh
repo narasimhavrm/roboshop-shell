@@ -52,7 +52,7 @@ mongo_schema_setup() {
   yum install mongodb-org-shell -y  &>>$log_file
 
   echo -e "${color} Load Schema ${nocolor}"
-  mongo --host mongodb-dev.devopsb73.store <${app_path}/schema/$component.js  &>>$log_file
+  mongo --host mongodb-dev.mystorymyway.store <${app_path}/schema/$component.js  &>>$log_file
 }
 
 mysql_schema_setup() {
@@ -60,7 +60,7 @@ mysql_schema_setup() {
   yum install mysql -y  &>>$log_file
 
   echo -e "${color} Load Schema ${nocolor}"
-  mysql -h mysql-dev.devopsb73.store -uroot -pRoboShop@1 </app/schema/${component}.sql   &>>$log_file
+  mysql -h mysql-dev.mystorymyway.store -uroot -pRoboShop@1 </app/schema/${component}.sql   &>>$log_file
 }
 
 maven() {
